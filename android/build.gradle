@@ -34,8 +34,15 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     implementation "com.android.support:appcompat-v7:${_supportLibVersion}"
     implementation "com.facebook.react:react-native:${_reactNativeVersion}"
-    implementation "cn.aigestudio.wheelpicker:WheelPicker:1.1.2"
+    
+    implementation(name: 'WheelPicker-112-SY', ext: 'aar')
 }
